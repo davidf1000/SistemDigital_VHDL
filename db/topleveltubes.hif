@@ -19,39 +19,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-Traffic
-# storage
-db|topleveltubes.(2).cnf
-db|topleveltubes.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-Traffic.vhd
-b038ec9528f41f31bfeee90b977b721
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-Traffic:Lampu
-}
-# lmf
-..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 topleveltubes
 # storage
 db|topleveltubes.(0).cnf
@@ -63,7 +30,7 @@ ON
 # case_insensitive
 # source_file
 topleveltubes.vhd
-37ac8079dcd2572d9a34249d1ba3f9c
+99d752325c48be80feb94f9cea94ca28
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -85,6 +52,39 @@ ON
 
 # end
 # entity
+fsm
+# storage
+db|topleveltubes.(2).cnf
+db|topleveltubes.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fsm.vhd
+95411c986ff547cd1c8dbafcabeef98f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+fsm:Lampu
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
 Clockdiv
 # storage
 db|topleveltubes.(1).cnf
@@ -96,7 +96,7 @@ ON
 # case_insensitive
 # source_file
 Clockdiv.vhd
-992ee8c515a625fc14f4dc7a73dbe324
+c9194aae9d9e1888506e9e57837082
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

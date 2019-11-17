@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 USE ieee.std_logic_unsigned.all;
 
-ENTITY Traffic IS
+ENTITY fsm IS
 PORT	(
 			Clock		: BIT;
 			Reset		: IN STD_LOGIC;
@@ -15,9 +15,9 @@ PORT	(
 			M_BT		: OUT STD_LOGIC;
 			K_BT		: OUT STD_LOGIC;
 			H_BT		: OUT STD_LOGIC);
-END Traffic;
+END fsm;
 
-ARCHITECTURE Behavior OF Traffic IS
+ARCHITECTURE Behavior OF fsm IS
 	TYPE State IS (S0, S1, S2, S3, E0, E1);
 	SIGNAL CurrentState : State;
 	SIGNAL Counter		: STD_LOGIC_VECTOR (3 downto 0);

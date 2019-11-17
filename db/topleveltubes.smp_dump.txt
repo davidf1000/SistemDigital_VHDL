@@ -1,5 +1,5 @@
 
-State Machine - |topleveltubes|Traffic:Lampu|CurrentState
+State Machine - |topleveltubes|fsm:Lampu|CurrentState
 Name CurrentState.E1 CurrentState.E0 CurrentState.S3 CurrentState.S2 CurrentState.S1 CurrentState.S0 
 CurrentState.S0 0 0 0 0 0 0 
 CurrentState.S1 0 0 0 0 1 1 

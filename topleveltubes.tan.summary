@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 0.687 ns
+Actual Time    : 2.155 ns
 From           : Day1
-To             : Traffic:Lampu|Counter[2]
+To             : fsm:Lampu|Counter[3]
 From Clock     : --
 To Clock       : Clock1
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 12.602 ns
-From           : Traffic:Lampu|K_BT
-To             : K_BT1
+Actual Time    : 11.095 ns
+From           : fsm:Lampu|M_BT
+To             : M_BT1
 From Clock     : Clock1
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.682 ns
+Actual Time    : 2.112 ns
 From           : Reset1
-To             : Traffic:Lampu|H_BT
+To             : fsm:Lampu|H_BT
 From Clock     : --
 To Clock       : Clock1
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'Clock1'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 225.53 MHz ( period = 4.434 ns )
-From           : CLOCKDIV:Waktu|count[16]
-To             : CLOCKDIV:Waktu|count[14]
+Actual Time    : 225.84 MHz ( period = 4.428 ns )
+From           : CLOCKDIV:Waktu|count[4]
+To             : CLOCKDIV:Waktu|count[13]
 From Clock     : Clock1
 To Clock       : Clock1
 Failed Paths   : 0

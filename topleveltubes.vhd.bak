@@ -39,16 +39,16 @@ ARCHITECTURE Behavior OF topleveltubes IS
 		DIVOUT: buffer BIT);
 	END COMPONENT;
 	
-	SIGNAL Clock : BIT;
+	SIGNAL Clock_buffer : BIT;
 	SIGNAL Emergency : STD_LOGIC ;
 	SIGNAL Reset: STD_LOGIC ;
 	SIGNAL Day: STD_LOGIC ;
 	
 	BEGIN
 		
-			Waktu : Clockdiv port map(Clock1, Clock);
+			Waktu : Clockdiv port map(Clock1, Clock_buffer);
 			Lampu : Traffic port map (
-					Clock => Clock,
+					Clock => Clock_buffer,
 					Reset => Reset1,
 					Day => Day1,
 					Emergency => Emergency1,

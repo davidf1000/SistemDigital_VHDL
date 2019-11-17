@@ -1,5 +1,5 @@
 Analysis & Synthesis report for topleveltubes
-Sun Nov 17 20:07:01 2019
+Sun Nov 17 20:27:41 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -12,7 +12,7 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. State Machine - |topleveltubes|Traffic:Lampu|CurrentState
+  7. State Machine - |topleveltubes|fsm:Lampu|CurrentState
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
  10. Analysis & Synthesis Messages
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 17 20:07:01 2019        ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 17 20:27:41 2019        ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; topleveltubes                                ;
 ; Top-level Entity Name              ; topleveltubes                                ;
@@ -138,9 +138,9 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                            ;
 +----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------+
+; fsm.vhd                          ; yes             ; User VHDL File        ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL/fsm.vhd           ;
 ; topleveltubes.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL/topleveltubes.vhd ;
 ; Clockdiv.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL/Clockdiv.vhd      ;
-; Traffic.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL/Traffic.vhd       ;
 +----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------------+
 
 
@@ -180,14 +180,14 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
 ; |topleveltubes             ; 75 (0)            ; 49 (0)       ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |topleveltubes                ; work         ;
 ;    |CLOCKDIV:Waktu|        ; 44 (44)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topleveltubes|CLOCKDIV:Waktu ; work         ;
-;    |Traffic:Lampu|         ; 31 (31)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topleveltubes|Traffic:Lampu  ; work         ;
+;    |fsm:Lampu|             ; 31 (31)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topleveltubes|fsm:Lampu      ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |topleveltubes|Traffic:Lampu|CurrentState                                                                   ;
+; State Machine - |topleveltubes|fsm:Lampu|CurrentState                                                                       ;
 +-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
 ; Name            ; CurrentState.E1 ; CurrentState.E0 ; CurrentState.S3 ; CurrentState.S2 ; CurrentState.S1 ; CurrentState.S0 ;
 +-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
@@ -215,13 +215,13 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 15:1               ; 4 bits    ; 40 LEs        ; 4 LEs                ; 36 LEs                 ; Yes        ; |topleveltubes|Traffic:Lampu|Counter[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 15:1               ; 4 bits    ; 40 LEs        ; 4 LEs                ; 36 LEs                 ; Yes        ; |topleveltubes|fsm:Lampu|Counter[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +-------------------------------+
@@ -230,8 +230,11 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Nov 17 20:07:00 2019
+    Info: Processing started: Sun Nov 17 20:27:40 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off topleveltubes -c topleveltubes
+Info: Found 2 design units, including 1 entities, in source file fsm.vhd
+    Info: Found design unit 1: fsm-Behavior
+    Info: Found entity 1: fsm
 Warning: Using design file topleveltubes.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: topleveltubes-Behavior
     Info: Found entity 1: topleveltubes
@@ -240,19 +243,16 @@ Warning: Using design file Clockdiv.vhd, which is not specified as a design file
     Info: Found design unit 1: CLOCKDIV-behavioural
     Info: Found entity 1: CLOCKDIV
 Info: Elaborating entity "Clockdiv" for hierarchy "Clockdiv:Waktu"
-Warning: Using design file Traffic.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info: Found design unit 1: Traffic-Behavior
-    Info: Found entity 1: Traffic
-Info: Elaborating entity "Traffic" for hierarchy "Traffic:Lampu"
+Info: Elaborating entity "fsm" for hierarchy "fsm:Lampu"
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clocktest"
 Info: Implemented 87 device resources after synthesis - the final resource count might be different
     Info: Implemented 5 input pins
     Info: Implemented 6 output pins
     Info: Implemented 76 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 271 megabytes
-    Info: Processing ended: Sun Nov 17 20:07:01 2019
+    Info: Processing ended: Sun Nov 17 20:27:41 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

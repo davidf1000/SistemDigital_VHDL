@@ -19,7 +19,7 @@ PORT	(
 END topleveltubes;
 
 ARCHITECTURE Behavior OF topleveltubes IS
-	COMPONENT Traffic IS
+	COMPONENT fsm IS
 		PORT	(
 			Clock		: BIT;
 			Reset		: IN STD_LOGIC;
@@ -47,7 +47,7 @@ ARCHITECTURE Behavior OF topleveltubes IS
 	BEGIN
 		
 			Waktu : Clockdiv port map(Clock1, Clock_buffer);
-			Lampu : Traffic port map (
+			Lampu : fsm port map (
 					Clock => Clock_buffer,
 					Reset => Reset1,
 					Day => Day1,

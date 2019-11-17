@@ -1,15 +1,15 @@
 |topleveltubes
 clocktest => ~NO_FANOUT~
 Clock1 => Clockdiv:Waktu.CLK
-Reset1 => Traffic:Lampu.Reset
-Day1 => Traffic:Lampu.Day
-Emergency1 => Traffic:Lampu.Emergency
-M_US1 <= Traffic:Lampu.M_US
-K_US1 <= Traffic:Lampu.K_US
-H_US1 <= Traffic:Lampu.H_US
-M_BT1 <= Traffic:Lampu.M_BT
-K_BT1 <= Traffic:Lampu.K_BT
-H_BT1 <= Traffic:Lampu.H_BT
+Reset1 => fsm:Lampu.Reset
+Day1 => fsm:Lampu.Day
+Emergency1 => fsm:Lampu.Emergency
+M_US1 <= fsm:Lampu.M_US
+K_US1 <= fsm:Lampu.K_US
+H_US1 <= fsm:Lampu.H_US
+M_BT1 <= fsm:Lampu.M_BT
+K_BT1 <= fsm:Lampu.K_BT
+H_BT1 <= fsm:Lampu.H_BT
 
 
 |topleveltubes|Clockdiv:Waktu
@@ -49,7 +49,7 @@ CLK => DIVOUT~reg0.CLK
 DIVOUT <= DIVOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|topleveltubes|Traffic:Lampu
+|topleveltubes|fsm:Lampu
 Clock => Counter[3].CLK
 Clock => Counter[2].CLK
 Clock => Counter[1].CLK

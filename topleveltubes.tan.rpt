@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for topleveltubes
-Sun Nov 17 20:07:12 2019
+Sun Nov 17 20:27:53 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                              ;
-+------------------------------+-------+---------------+----------------------------------+--------------------------+--------------------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                      ; From                     ; To                       ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+----------------------------------+--------------------------+--------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 0.687 ns                         ; Day1                     ; Traffic:Lampu|Counter[2] ; --         ; Clock1   ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 12.602 ns                        ; Traffic:Lampu|K_BT       ; K_BT1                    ; Clock1     ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; 3.682 ns                         ; Reset1                   ; Traffic:Lampu|H_BT       ; --         ; Clock1   ; 0            ;
-; Clock Setup: 'Clock1'        ; N/A   ; None          ; 225.53 MHz ( period = 4.434 ns ) ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; 0            ;
-; Total number of failed paths ;       ;               ;                                  ;                          ;                          ;            ;          ; 0            ;
-+------------------------------+-------+---------------+----------------------------------+--------------------------+--------------------------+------------+----------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                             ;
++------------------------------+-------+---------------+----------------------------------+-------------------------+--------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                    ; To                       ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-------------------------+--------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 2.155 ns                         ; Day1                    ; fsm:Lampu|Counter[3]     ; --         ; Clock1   ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 11.095 ns                        ; fsm:Lampu|M_BT          ; M_BT1                    ; Clock1     ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 2.112 ns                         ; Reset1                  ; fsm:Lampu|H_BT           ; --         ; Clock1   ; 0            ;
+; Clock Setup: 'Clock1'        ; N/A   ; None          ; 225.84 MHz ( period = 4.428 ns ) ; CLOCKDIV:Waktu|count[4] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                         ;                          ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-------------------------+--------------------------+------------+----------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -108,284 +108,284 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------+-----------------------------------------------------+--------------------------+--------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack                                   ; Actual fmax (period)                                ; From                     ; To                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-----------------------------------------+-----------------------------------------------------+--------------------------+--------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 225.53 MHz ( period = 4.434 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.197 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 226.19 MHz ( period = 4.421 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.182 ns                ;
-; N/A                                     ; 231.54 MHz ( period = 4.319 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.078 ns                ;
-; N/A                                     ; 235.52 MHz ( period = 4.246 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.63 MHz ( period = 4.244 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
-; N/A                                     ; 235.90 MHz ( period = 4.239 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[30] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.998 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; CLOCKDIV:Waktu|count[17] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.001 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.74 MHz ( period = 4.224 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.985 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; CLOCKDIV:Waktu|count[27] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.983 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; CLOCKDIV:Waktu|count[7]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.977 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.21 MHz ( period = 4.198 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.959 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 238.61 MHz ( period = 4.191 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.952 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.46 MHz ( period = 4.176 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.937 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[30] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[29] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[28] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[19] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[18] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[26] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[24] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[27] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[25] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[17] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[16] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[23] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[22] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[21] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.81 MHz ( period = 4.170 ns )                    ; CLOCKDIV:Waktu|count[16] ; CLOCKDIV:Waktu|count[20] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.931 ns                ;
-; N/A                                     ; 239.98 MHz ( period = 4.167 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
-; N/A                                     ; 240.04 MHz ( period = 4.166 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[30] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
-; N/A                                     ; 240.44 MHz ( period = 4.159 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[29] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.918 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[30] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[29] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[28] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[19] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[18] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[26] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[24] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[27] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[25] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[17] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[16] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[23] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[22] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[21] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.56 MHz ( period = 4.157 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[20] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.67 MHz ( period = 4.155 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
-; N/A                                     ; 240.67 MHz ( period = 4.155 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.916 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 225.84 MHz ( period = 4.428 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.189 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 230.84 MHz ( period = 4.332 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.093 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.078 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 232.18 MHz ( period = 4.307 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.068 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 236.18 MHz ( period = 4.234 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 4.005 ns                ;
+; N/A                                     ; 236.57 MHz ( period = 4.227 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[30] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.998 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 238.72 MHz ( period = 4.189 ns )                    ; CLOCKDIV:Waktu|count[24] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 239.35 MHz ( period = 4.178 ns )                    ; CLOCKDIV:Waktu|count[9]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.10 MHz ( period = 4.165 ns )                    ; CLOCKDIV:Waktu|count[5]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.67 MHz ( period = 4.155 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[30] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[1]  ; CLOCKDIV:Waktu|count[30] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[28] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[29] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[19] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[18] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[24] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[26] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[25] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[27] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[21] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[22] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[20] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[23] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[16] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 240.73 MHz ( period = 4.154 ns )                    ; CLOCKDIV:Waktu|count[4]  ; CLOCKDIV:Waktu|count[17] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.925 ns                ;
+; N/A                                     ; 241.14 MHz ( period = 4.147 ns )                    ; CLOCKDIV:Waktu|count[0]  ; CLOCKDIV:Waktu|count[29] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.918 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 241.66 MHz ( period = 4.138 ns )                    ; CLOCKDIV:Waktu|count[21] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.889 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.19 MHz ( period = 4.129 ns )                    ; CLOCKDIV:Waktu|count[12] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 242.95 MHz ( period = 4.116 ns )                    ; CLOCKDIV:Waktu|count[3]  ; CLOCKDIV:Waktu|count[31] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.887 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.32 MHz ( period = 4.093 ns )                    ; CLOCKDIV:Waktu|count[11] ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.854 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[4]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[5]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[7]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[6]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[2]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[0]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[1]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[3]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[11] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[8]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[9]  ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[10] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[12] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[14] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[15] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 244.62 MHz ( period = 4.088 ns )                    ; CLOCKDIV:Waktu|count[6]  ; CLOCKDIV:Waktu|count[13] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.849 ns                ;
+; N/A                                     ; 245.40 MHz ( period = 4.075 ns )                    ; CLOCKDIV:Waktu|count[2]  ; CLOCKDIV:Waktu|count[30] ; Clock1     ; Clock1   ; None                        ; None                      ; 3.846 ns                ;
 ; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                          ;                          ;            ;          ;                             ;                           ;                         ;
 +-----------------------------------------+-----------------------------------------------------+--------------------------+--------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; tsu                                                                                       ;
-+-------+--------------+------------+------------+-------------------------------+----------+
-; Slack ; Required tsu ; Actual tsu ; From       ; To                            ; To Clock ;
-+-------+--------------+------------+------------+-------------------------------+----------+
-; N/A   ; None         ; 0.687 ns   ; Day1       ; Traffic:Lampu|Counter[2]      ; Clock1   ;
-; N/A   ; None         ; 0.686 ns   ; Day1       ; Traffic:Lampu|Counter[3]      ; Clock1   ;
-; N/A   ; None         ; 0.684 ns   ; Day1       ; Traffic:Lampu|Counter[0]      ; Clock1   ;
-; N/A   ; None         ; 0.683 ns   ; Day1       ; Traffic:Lampu|Counter[1]      ; Clock1   ;
-; N/A   ; None         ; 0.337 ns   ; Emergency1 ; Traffic:Lampu|Counter[2]      ; Clock1   ;
-; N/A   ; None         ; 0.336 ns   ; Emergency1 ; Traffic:Lampu|Counter[3]      ; Clock1   ;
-; N/A   ; None         ; 0.334 ns   ; Emergency1 ; Traffic:Lampu|Counter[0]      ; Clock1   ;
-; N/A   ; None         ; 0.333 ns   ; Emergency1 ; Traffic:Lampu|Counter[1]      ; Clock1   ;
-; N/A   ; None         ; 0.133 ns   ; Day1       ; Traffic:Lampu|CurrentState.S1 ; Clock1   ;
-; N/A   ; None         ; 0.129 ns   ; Day1       ; Traffic:Lampu|CurrentState.S3 ; Clock1   ;
-; N/A   ; None         ; 0.113 ns   ; Day1       ; Traffic:Lampu|CurrentState.S0 ; Clock1   ;
-; N/A   ; None         ; 0.103 ns   ; Day1       ; Traffic:Lampu|CurrentState.S2 ; Clock1   ;
-; N/A   ; None         ; -0.744 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.E0 ; Clock1   ;
-; N/A   ; None         ; -1.211 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.S0 ; Clock1   ;
-; N/A   ; None         ; -1.275 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.S3 ; Clock1   ;
-; N/A   ; None         ; -1.276 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.S1 ; Clock1   ;
-; N/A   ; None         ; -1.413 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.S2 ; Clock1   ;
-; N/A   ; None         ; -3.434 ns  ; Reset1     ; Traffic:Lampu|M_US            ; Clock1   ;
-; N/A   ; None         ; -3.434 ns  ; Reset1     ; Traffic:Lampu|K_US            ; Clock1   ;
-; N/A   ; None         ; -3.434 ns  ; Reset1     ; Traffic:Lampu|H_US            ; Clock1   ;
-; N/A   ; None         ; -3.434 ns  ; Reset1     ; Traffic:Lampu|M_BT            ; Clock1   ;
-; N/A   ; None         ; -3.434 ns  ; Reset1     ; Traffic:Lampu|K_BT            ; Clock1   ;
-; N/A   ; None         ; -3.434 ns  ; Reset1     ; Traffic:Lampu|H_BT            ; Clock1   ;
-+-------+--------------+------------+------------+-------------------------------+----------+
++---------------------------------------------------------------------------------------+
+; tsu                                                                                   ;
++-------+--------------+------------+------------+---------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From       ; To                        ; To Clock ;
++-------+--------------+------------+------------+---------------------------+----------+
+; N/A   ; None         ; 2.155 ns   ; Day1       ; fsm:Lampu|Counter[3]      ; Clock1   ;
+; N/A   ; None         ; 2.154 ns   ; Day1       ; fsm:Lampu|Counter[1]      ; Clock1   ;
+; N/A   ; None         ; 2.153 ns   ; Day1       ; fsm:Lampu|Counter[0]      ; Clock1   ;
+; N/A   ; None         ; 2.153 ns   ; Day1       ; fsm:Lampu|Counter[2]      ; Clock1   ;
+; N/A   ; None         ; 1.879 ns   ; Emergency1 ; fsm:Lampu|Counter[3]      ; Clock1   ;
+; N/A   ; None         ; 1.878 ns   ; Emergency1 ; fsm:Lampu|Counter[1]      ; Clock1   ;
+; N/A   ; None         ; 1.877 ns   ; Emergency1 ; fsm:Lampu|Counter[0]      ; Clock1   ;
+; N/A   ; None         ; 1.877 ns   ; Emergency1 ; fsm:Lampu|Counter[2]      ; Clock1   ;
+; N/A   ; None         ; 1.697 ns   ; Day1       ; fsm:Lampu|CurrentState.S0 ; Clock1   ;
+; N/A   ; None         ; 1.299 ns   ; Day1       ; fsm:Lampu|CurrentState.S1 ; Clock1   ;
+; N/A   ; None         ; 1.189 ns   ; Day1       ; fsm:Lampu|CurrentState.S3 ; Clock1   ;
+; N/A   ; None         ; 1.168 ns   ; Day1       ; fsm:Lampu|CurrentState.S2 ; Clock1   ;
+; N/A   ; None         ; 0.769 ns   ; Emergency1 ; fsm:Lampu|CurrentState.E0 ; Clock1   ;
+; N/A   ; None         ; -0.061 ns  ; Emergency1 ; fsm:Lampu|CurrentState.S0 ; Clock1   ;
+; N/A   ; None         ; -0.110 ns  ; Emergency1 ; fsm:Lampu|CurrentState.S3 ; Clock1   ;
+; N/A   ; None         ; -0.111 ns  ; Emergency1 ; fsm:Lampu|CurrentState.S1 ; Clock1   ;
+; N/A   ; None         ; -0.117 ns  ; Emergency1 ; fsm:Lampu|CurrentState.S2 ; Clock1   ;
+; N/A   ; None         ; -1.864 ns  ; Reset1     ; fsm:Lampu|M_US            ; Clock1   ;
+; N/A   ; None         ; -1.864 ns  ; Reset1     ; fsm:Lampu|K_US            ; Clock1   ;
+; N/A   ; None         ; -1.864 ns  ; Reset1     ; fsm:Lampu|H_US            ; Clock1   ;
+; N/A   ; None         ; -1.864 ns  ; Reset1     ; fsm:Lampu|M_BT            ; Clock1   ;
+; N/A   ; None         ; -1.864 ns  ; Reset1     ; fsm:Lampu|K_BT            ; Clock1   ;
+; N/A   ; None         ; -1.864 ns  ; Reset1     ; fsm:Lampu|H_BT            ; Clock1   ;
++-------+--------------+------------+------------+---------------------------+----------+
 
 
-+-----------------------------------------------------------------------------+
-; tco                                                                         ;
-+-------+--------------+------------+--------------------+-------+------------+
-; Slack ; Required tco ; Actual tco ; From               ; To    ; From Clock ;
-+-------+--------------+------------+--------------------+-------+------------+
-; N/A   ; None         ; 12.602 ns  ; Traffic:Lampu|K_BT ; K_BT1 ; Clock1     ;
-; N/A   ; None         ; 12.587 ns  ; Traffic:Lampu|M_BT ; M_BT1 ; Clock1     ;
-; N/A   ; None         ; 12.307 ns  ; Traffic:Lampu|H_US ; H_US1 ; Clock1     ;
-; N/A   ; None         ; 12.305 ns  ; Traffic:Lampu|M_US ; M_US1 ; Clock1     ;
-; N/A   ; None         ; 12.304 ns  ; Traffic:Lampu|K_US ; K_US1 ; Clock1     ;
-; N/A   ; None         ; 12.037 ns  ; Traffic:Lampu|H_BT ; H_BT1 ; Clock1     ;
-+-------+--------------+------------+--------------------+-------+------------+
++-------------------------------------------------------------------------+
+; tco                                                                     ;
++-------+--------------+------------+----------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From           ; To    ; From Clock ;
++-------+--------------+------------+----------------+-------+------------+
+; N/A   ; None         ; 11.095 ns  ; fsm:Lampu|M_BT ; M_BT1 ; Clock1     ;
+; N/A   ; None         ; 11.084 ns  ; fsm:Lampu|H_BT ; H_BT1 ; Clock1     ;
+; N/A   ; None         ; 11.066 ns  ; fsm:Lampu|M_US ; M_US1 ; Clock1     ;
+; N/A   ; None         ; 10.821 ns  ; fsm:Lampu|K_US ; K_US1 ; Clock1     ;
+; N/A   ; None         ; 10.813 ns  ; fsm:Lampu|H_US ; H_US1 ; Clock1     ;
+; N/A   ; None         ; 10.811 ns  ; fsm:Lampu|K_BT ; K_BT1 ; Clock1     ;
++-------+--------------+------------+----------------+-------+------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; th                                                                                              ;
-+---------------+-------------+-----------+------------+-------------------------------+----------+
-; Minimum Slack ; Required th ; Actual th ; From       ; To                            ; To Clock ;
-+---------------+-------------+-----------+------------+-------------------------------+----------+
-; N/A           ; None        ; 3.682 ns  ; Reset1     ; Traffic:Lampu|M_US            ; Clock1   ;
-; N/A           ; None        ; 3.682 ns  ; Reset1     ; Traffic:Lampu|K_US            ; Clock1   ;
-; N/A           ; None        ; 3.682 ns  ; Reset1     ; Traffic:Lampu|H_US            ; Clock1   ;
-; N/A           ; None        ; 3.682 ns  ; Reset1     ; Traffic:Lampu|M_BT            ; Clock1   ;
-; N/A           ; None        ; 3.682 ns  ; Reset1     ; Traffic:Lampu|K_BT            ; Clock1   ;
-; N/A           ; None        ; 3.682 ns  ; Reset1     ; Traffic:Lampu|H_BT            ; Clock1   ;
-; N/A           ; None        ; 1.661 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.S2 ; Clock1   ;
-; N/A           ; None        ; 1.524 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.S1 ; Clock1   ;
-; N/A           ; None        ; 1.523 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.S3 ; Clock1   ;
-; N/A           ; None        ; 1.459 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.S0 ; Clock1   ;
-; N/A           ; None        ; 0.992 ns  ; Emergency1 ; Traffic:Lampu|CurrentState.E0 ; Clock1   ;
-; N/A           ; None        ; 0.720 ns  ; Day1       ; Traffic:Lampu|CurrentState.S3 ; Clock1   ;
-; N/A           ; None        ; 0.718 ns  ; Day1       ; Traffic:Lampu|CurrentState.S1 ; Clock1   ;
-; N/A           ; None        ; 0.717 ns  ; Day1       ; Traffic:Lampu|CurrentState.S2 ; Clock1   ;
-; N/A           ; None        ; 0.253 ns  ; Day1       ; Traffic:Lampu|CurrentState.S0 ; Clock1   ;
-; N/A           ; None        ; -0.085 ns ; Emergency1 ; Traffic:Lampu|Counter[1]      ; Clock1   ;
-; N/A           ; None        ; -0.086 ns ; Emergency1 ; Traffic:Lampu|Counter[0]      ; Clock1   ;
-; N/A           ; None        ; -0.088 ns ; Emergency1 ; Traffic:Lampu|Counter[3]      ; Clock1   ;
-; N/A           ; None        ; -0.089 ns ; Emergency1 ; Traffic:Lampu|Counter[2]      ; Clock1   ;
-; N/A           ; None        ; -0.148 ns ; Day1       ; Traffic:Lampu|Counter[1]      ; Clock1   ;
-; N/A           ; None        ; -0.149 ns ; Day1       ; Traffic:Lampu|Counter[0]      ; Clock1   ;
-; N/A           ; None        ; -0.151 ns ; Day1       ; Traffic:Lampu|Counter[3]      ; Clock1   ;
-; N/A           ; None        ; -0.152 ns ; Day1       ; Traffic:Lampu|Counter[2]      ; Clock1   ;
-+---------------+-------------+-----------+------------+-------------------------------+----------+
++---------------------------------------------------------------------------------------------+
+; th                                                                                          ;
++---------------+-------------+-----------+------------+---------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From       ; To                        ; To Clock ;
++---------------+-------------+-----------+------------+---------------------------+----------+
+; N/A           ; None        ; 2.112 ns  ; Reset1     ; fsm:Lampu|M_US            ; Clock1   ;
+; N/A           ; None        ; 2.112 ns  ; Reset1     ; fsm:Lampu|K_US            ; Clock1   ;
+; N/A           ; None        ; 2.112 ns  ; Reset1     ; fsm:Lampu|H_US            ; Clock1   ;
+; N/A           ; None        ; 2.112 ns  ; Reset1     ; fsm:Lampu|M_BT            ; Clock1   ;
+; N/A           ; None        ; 2.112 ns  ; Reset1     ; fsm:Lampu|K_BT            ; Clock1   ;
+; N/A           ; None        ; 2.112 ns  ; Reset1     ; fsm:Lampu|H_BT            ; Clock1   ;
+; N/A           ; None        ; 0.365 ns  ; Emergency1 ; fsm:Lampu|CurrentState.S2 ; Clock1   ;
+; N/A           ; None        ; 0.359 ns  ; Emergency1 ; fsm:Lampu|CurrentState.S1 ; Clock1   ;
+; N/A           ; None        ; 0.358 ns  ; Emergency1 ; fsm:Lampu|CurrentState.S3 ; Clock1   ;
+; N/A           ; None        ; 0.309 ns  ; Emergency1 ; fsm:Lampu|CurrentState.S0 ; Clock1   ;
+; N/A           ; None        ; -0.521 ns ; Emergency1 ; fsm:Lampu|CurrentState.E0 ; Clock1   ;
+; N/A           ; None        ; -0.708 ns ; Day1       ; fsm:Lampu|CurrentState.S2 ; Clock1   ;
+; N/A           ; None        ; -0.715 ns ; Day1       ; fsm:Lampu|CurrentState.S1 ; Clock1   ;
+; N/A           ; None        ; -0.716 ns ; Day1       ; fsm:Lampu|CurrentState.S3 ; Clock1   ;
+; N/A           ; None        ; -1.335 ns ; Day1       ; fsm:Lampu|CurrentState.S0 ; Clock1   ;
+; N/A           ; None        ; -1.584 ns ; Day1       ; fsm:Lampu|Counter[0]      ; Clock1   ;
+; N/A           ; None        ; -1.584 ns ; Day1       ; fsm:Lampu|Counter[2]      ; Clock1   ;
+; N/A           ; None        ; -1.585 ns ; Day1       ; fsm:Lampu|Counter[1]      ; Clock1   ;
+; N/A           ; None        ; -1.586 ns ; Day1       ; fsm:Lampu|Counter[3]      ; Clock1   ;
+; N/A           ; None        ; -1.629 ns ; Emergency1 ; fsm:Lampu|Counter[0]      ; Clock1   ;
+; N/A           ; None        ; -1.629 ns ; Emergency1 ; fsm:Lampu|Counter[2]      ; Clock1   ;
+; N/A           ; None        ; -1.630 ns ; Emergency1 ; fsm:Lampu|Counter[1]      ; Clock1   ;
+; N/A           ; None        ; -1.631 ns ; Emergency1 ; fsm:Lampu|Counter[3]      ; Clock1   ;
++---------------+-------------+-----------+------------+---------------------------+----------+
 
 
 +--------------------------+
@@ -394,87 +394,87 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Nov 17 20:07:12 2019
+    Info: Processing started: Sun Nov 17 20:27:52 2019
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off topleveltubes -c topleveltubes --timing_analysis_only
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "Clock1" is an undefined clock
 Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
     Info: Detected ripple clock "CLOCKDIV:Waktu|DIVOUT" as buffer
-Info: Clock "Clock1" has Internal fmax of 225.53 MHz between source register "CLOCKDIV:Waktu|count[16]" and destination register "CLOCKDIV:Waktu|count[0]" (period= 4.434 ns)
-    Info: + Longest register to register delay is 4.197 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X67_Y20_N1; Fanout = 3; REG Node = 'CLOCKDIV:Waktu|count[16]'
-        Info: 2: + IC(1.225 ns) + CELL(0.177 ns) = 1.402 ns; Loc. = LCCOMB_X68_Y20_N20; Fanout = 1; COMB Node = 'CLOCKDIV:Waktu|LessThan0~5'
-        Info: 3: + IC(0.315 ns) + CELL(0.507 ns) = 2.224 ns; Loc. = LCCOMB_X68_Y20_N4; Fanout = 1; COMB Node = 'CLOCKDIV:Waktu|LessThan0~7'
-        Info: 4: + IC(0.301 ns) + CELL(0.322 ns) = 2.847 ns; Loc. = LCCOMB_X68_Y20_N0; Fanout = 33; COMB Node = 'CLOCKDIV:Waktu|LessThan0~10'
-        Info: 5: + IC(0.770 ns) + CELL(0.580 ns) = 4.197 ns; Loc. = LCFF_X67_Y21_N1; Fanout = 3; REG Node = 'CLOCKDIV:Waktu|count[0]'
-        Info: Total cell delay = 1.586 ns ( 37.79 % )
-        Info: Total interconnect delay = 2.611 ns ( 62.21 % )
-    Info: - Smallest clock skew is 0.002 ns
-        Info: + Shortest clock path from clock "Clock1" to destination register is 2.970 ns
+Info: Clock "Clock1" has Internal fmax of 225.84 MHz between source register "CLOCKDIV:Waktu|count[4]" and destination register "CLOCKDIV:Waktu|count[4]" (period= 4.428 ns)
+    Info: + Longest register to register delay is 4.189 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X2_Y32_N9; Fanout = 3; REG Node = 'CLOCKDIV:Waktu|count[4]'
+        Info: 2: + IC(0.850 ns) + CELL(0.455 ns) = 1.305 ns; Loc. = LCCOMB_X1_Y32_N16; Fanout = 1; COMB Node = 'CLOCKDIV:Waktu|LessThan0~1'
+        Info: 3: + IC(0.551 ns) + CELL(0.512 ns) = 2.368 ns; Loc. = LCCOMB_X1_Y31_N30; Fanout = 1; COMB Node = 'CLOCKDIV:Waktu|LessThan0~4'
+        Info: 4: + IC(0.296 ns) + CELL(0.178 ns) = 2.842 ns; Loc. = LCCOMB_X1_Y31_N0; Fanout = 33; COMB Node = 'CLOCKDIV:Waktu|LessThan0~10'
+        Info: 5: + IC(0.767 ns) + CELL(0.580 ns) = 4.189 ns; Loc. = LCFF_X2_Y32_N9; Fanout = 3; REG Node = 'CLOCKDIV:Waktu|count[4]'
+        Info: Total cell delay = 1.725 ns ( 41.18 % )
+        Info: Total interconnect delay = 2.464 ns ( 58.82 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "Clock1" to destination register is 2.889 ns
             Info: 1: + IC(0.000 ns) + CELL(1.016 ns) = 1.016 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'Clock1'
             Info: 2: + IC(0.127 ns) + CELL(0.000 ns) = 1.143 ns; Loc. = CLKCTRL_G3; Fanout = 32; COMB Node = 'Clock1~clkctrl'
-            Info: 3: + IC(1.225 ns) + CELL(0.602 ns) = 2.970 ns; Loc. = LCFF_X67_Y21_N1; Fanout = 3; REG Node = 'CLOCKDIV:Waktu|count[0]'
-            Info: Total cell delay = 1.618 ns ( 54.48 % )
-            Info: Total interconnect delay = 1.352 ns ( 45.52 % )
-        Info: - Longest clock path from clock "Clock1" to source register is 2.968 ns
+            Info: 3: + IC(1.144 ns) + CELL(0.602 ns) = 2.889 ns; Loc. = LCFF_X2_Y32_N9; Fanout = 3; REG Node = 'CLOCKDIV:Waktu|count[4]'
+            Info: Total cell delay = 1.618 ns ( 56.01 % )
+            Info: Total interconnect delay = 1.271 ns ( 43.99 % )
+        Info: - Longest clock path from clock "Clock1" to source register is 2.889 ns
             Info: 1: + IC(0.000 ns) + CELL(1.016 ns) = 1.016 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'Clock1'
             Info: 2: + IC(0.127 ns) + CELL(0.000 ns) = 1.143 ns; Loc. = CLKCTRL_G3; Fanout = 32; COMB Node = 'Clock1~clkctrl'
-            Info: 3: + IC(1.223 ns) + CELL(0.602 ns) = 2.968 ns; Loc. = LCFF_X67_Y20_N1; Fanout = 3; REG Node = 'CLOCKDIV:Waktu|count[16]'
-            Info: Total cell delay = 1.618 ns ( 54.51 % )
-            Info: Total interconnect delay = 1.350 ns ( 45.49 % )
+            Info: 3: + IC(1.144 ns) + CELL(0.602 ns) = 2.889 ns; Loc. = LCFF_X2_Y32_N9; Fanout = 3; REG Node = 'CLOCKDIV:Waktu|count[4]'
+            Info: Total cell delay = 1.618 ns ( 56.01 % )
+            Info: Total interconnect delay = 1.271 ns ( 43.99 % )
     Info: + Micro clock to output delay of source is 0.277 ns
     Info: + Micro setup delay of destination is -0.038 ns
-Info: tsu for register "Traffic:Lampu|Counter[2]" (data pin = "Day1", clock pin = "Clock1") is 0.687 ns
-    Info: + Longest pin to register delay is 8.664 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.853 ns) = 0.853 ns; Loc. = PIN_B15; Fanout = 5; PIN Node = 'Day1'
-        Info: 2: + IC(5.284 ns) + CELL(0.521 ns) = 6.658 ns; Loc. = LCCOMB_X51_Y40_N26; Fanout = 2; COMB Node = 'Traffic:Lampu|Selector3~0'
-        Info: 3: + IC(0.313 ns) + CELL(0.178 ns) = 7.149 ns; Loc. = LCCOMB_X51_Y40_N0; Fanout = 1; COMB Node = 'Traffic:Lampu|Counter[3]~45'
-        Info: 4: + IC(0.285 ns) + CELL(0.178 ns) = 7.612 ns; Loc. = LCCOMB_X51_Y40_N10; Fanout = 1; COMB Node = 'Traffic:Lampu|Counter[3]~47'
-        Info: 5: + IC(0.286 ns) + CELL(0.178 ns) = 8.076 ns; Loc. = LCCOMB_X51_Y40_N28; Fanout = 4; COMB Node = 'Traffic:Lampu|Counter[3]~48'
-        Info: 6: + IC(0.315 ns) + CELL(0.177 ns) = 8.568 ns; Loc. = LCCOMB_X51_Y40_N2; Fanout = 1; COMB Node = 'Traffic:Lampu|Selector7~2'
-        Info: 7: + IC(0.000 ns) + CELL(0.096 ns) = 8.664 ns; Loc. = LCFF_X51_Y40_N3; Fanout = 9; REG Node = 'Traffic:Lampu|Counter[2]'
-        Info: Total cell delay = 2.181 ns ( 25.17 % )
-        Info: Total interconnect delay = 6.483 ns ( 74.83 % )
+Info: tsu for register "fsm:Lampu|Counter[3]" (data pin = "Day1", clock pin = "Clock1") is 2.155 ns
+    Info: + Longest pin to register delay is 8.991 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.843 ns) = 0.843 ns; Loc. = PIN_D14; Fanout = 5; PIN Node = 'Day1'
+        Info: 2: + IC(5.562 ns) + CELL(0.542 ns) = 6.947 ns; Loc. = LCCOMB_X55_Y43_N26; Fanout = 2; COMB Node = 'fsm:Lampu|Selector3~0'
+        Info: 3: + IC(0.322 ns) + CELL(0.178 ns) = 7.447 ns; Loc. = LCCOMB_X55_Y43_N0; Fanout = 1; COMB Node = 'fsm:Lampu|Counter[3]~45'
+        Info: 4: + IC(0.288 ns) + CELL(0.178 ns) = 7.913 ns; Loc. = LCCOMB_X55_Y43_N2; Fanout = 1; COMB Node = 'fsm:Lampu|Counter[3]~47'
+        Info: 5: + IC(0.301 ns) + CELL(0.178 ns) = 8.392 ns; Loc. = LCCOMB_X55_Y43_N28; Fanout = 4; COMB Node = 'fsm:Lampu|Counter[3]~48'
+        Info: 6: + IC(0.326 ns) + CELL(0.177 ns) = 8.895 ns; Loc. = LCCOMB_X55_Y43_N8; Fanout = 1; COMB Node = 'fsm:Lampu|Selector6~0'
+        Info: 7: + IC(0.000 ns) + CELL(0.096 ns) = 8.991 ns; Loc. = LCFF_X55_Y43_N9; Fanout = 8; REG Node = 'fsm:Lampu|Counter[3]'
+        Info: Total cell delay = 2.192 ns ( 24.38 % )
+        Info: Total interconnect delay = 6.799 ns ( 75.62 % )
     Info: + Micro setup delay of destination is -0.038 ns
-    Info: - Shortest clock path from clock "Clock1" to destination register is 7.939 ns
+    Info: - Shortest clock path from clock "Clock1" to destination register is 6.798 ns
         Info: 1: + IC(0.000 ns) + CELL(1.016 ns) = 1.016 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'Clock1'
-        Info: 2: + IC(2.295 ns) + CELL(0.879 ns) = 4.190 ns; Loc. = LCFF_X68_Y20_N19; Fanout = 2; REG Node = 'CLOCKDIV:Waktu|DIVOUT'
-        Info: 3: + IC(1.909 ns) + CELL(0.000 ns) = 6.099 ns; Loc. = CLKCTRL_G6; Fanout = 16; COMB Node = 'CLOCKDIV:Waktu|DIVOUT~clkctrl'
-        Info: 4: + IC(1.238 ns) + CELL(0.602 ns) = 7.939 ns; Loc. = LCFF_X51_Y40_N3; Fanout = 9; REG Node = 'Traffic:Lampu|Counter[2]'
-        Info: Total cell delay = 2.497 ns ( 31.45 % )
-        Info: Total interconnect delay = 5.442 ns ( 68.55 % )
-Info: tco from clock "Clock1" to destination pin "K_BT1" through register "Traffic:Lampu|K_BT" is 12.602 ns
-    Info: + Longest clock path from clock "Clock1" to source register is 7.938 ns
+        Info: 2: + IC(1.409 ns) + CELL(0.879 ns) = 3.304 ns; Loc. = LCFF_X1_Y31_N17; Fanout = 2; REG Node = 'CLOCKDIV:Waktu|DIVOUT'
+        Info: 3: + IC(1.658 ns) + CELL(0.000 ns) = 4.962 ns; Loc. = CLKCTRL_G0; Fanout = 16; COMB Node = 'CLOCKDIV:Waktu|DIVOUT~clkctrl'
+        Info: 4: + IC(1.234 ns) + CELL(0.602 ns) = 6.798 ns; Loc. = LCFF_X55_Y43_N9; Fanout = 8; REG Node = 'fsm:Lampu|Counter[3]'
+        Info: Total cell delay = 2.497 ns ( 36.73 % )
+        Info: Total interconnect delay = 4.301 ns ( 63.27 % )
+Info: tco from clock "Clock1" to destination pin "M_BT1" through register "fsm:Lampu|M_BT" is 11.095 ns
+    Info: + Longest clock path from clock "Clock1" to source register is 6.798 ns
         Info: 1: + IC(0.000 ns) + CELL(1.016 ns) = 1.016 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'Clock1'
-        Info: 2: + IC(2.295 ns) + CELL(0.879 ns) = 4.190 ns; Loc. = LCFF_X68_Y20_N19; Fanout = 2; REG Node = 'CLOCKDIV:Waktu|DIVOUT'
-        Info: 3: + IC(1.909 ns) + CELL(0.000 ns) = 6.099 ns; Loc. = CLKCTRL_G6; Fanout = 16; COMB Node = 'CLOCKDIV:Waktu|DIVOUT~clkctrl'
-        Info: 4: + IC(1.237 ns) + CELL(0.602 ns) = 7.938 ns; Loc. = LCFF_X50_Y40_N9; Fanout = 1; REG Node = 'Traffic:Lampu|K_BT'
-        Info: Total cell delay = 2.497 ns ( 31.46 % )
-        Info: Total interconnect delay = 5.441 ns ( 68.54 % )
+        Info: 2: + IC(1.409 ns) + CELL(0.879 ns) = 3.304 ns; Loc. = LCFF_X1_Y31_N17; Fanout = 2; REG Node = 'CLOCKDIV:Waktu|DIVOUT'
+        Info: 3: + IC(1.658 ns) + CELL(0.000 ns) = 4.962 ns; Loc. = CLKCTRL_G0; Fanout = 16; COMB Node = 'CLOCKDIV:Waktu|DIVOUT~clkctrl'
+        Info: 4: + IC(1.234 ns) + CELL(0.602 ns) = 6.798 ns; Loc. = LCFF_X54_Y43_N23; Fanout = 1; REG Node = 'fsm:Lampu|M_BT'
+        Info: Total cell delay = 2.497 ns ( 36.73 % )
+        Info: Total interconnect delay = 4.301 ns ( 63.27 % )
     Info: + Micro clock to output delay of source is 0.277 ns
-    Info: + Longest register to pin delay is 4.387 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X50_Y40_N9; Fanout = 1; REG Node = 'Traffic:Lampu|K_BT'
-        Info: 2: + IC(1.391 ns) + CELL(2.996 ns) = 4.387 ns; Loc. = PIN_B13; Fanout = 0; PIN Node = 'K_BT1'
-        Info: Total cell delay = 2.996 ns ( 68.29 % )
-        Info: Total interconnect delay = 1.391 ns ( 31.71 % )
-Info: th for register "Traffic:Lampu|M_US" (data pin = "Reset1", clock pin = "Clock1") is 3.682 ns
-    Info: + Longest clock path from clock "Clock1" to destination register is 7.938 ns
+    Info: + Longest register to pin delay is 4.020 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X54_Y43_N23; Fanout = 1; REG Node = 'fsm:Lampu|M_BT'
+        Info: 2: + IC(1.024 ns) + CELL(2.996 ns) = 4.020 ns; Loc. = PIN_F14; Fanout = 0; PIN Node = 'M_BT1'
+        Info: Total cell delay = 2.996 ns ( 74.53 % )
+        Info: Total interconnect delay = 1.024 ns ( 25.47 % )
+Info: th for register "fsm:Lampu|M_US" (data pin = "Reset1", clock pin = "Clock1") is 2.112 ns
+    Info: + Longest clock path from clock "Clock1" to destination register is 6.798 ns
         Info: 1: + IC(0.000 ns) + CELL(1.016 ns) = 1.016 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'Clock1'
-        Info: 2: + IC(2.295 ns) + CELL(0.879 ns) = 4.190 ns; Loc. = LCFF_X68_Y20_N19; Fanout = 2; REG Node = 'CLOCKDIV:Waktu|DIVOUT'
-        Info: 3: + IC(1.909 ns) + CELL(0.000 ns) = 6.099 ns; Loc. = CLKCTRL_G6; Fanout = 16; COMB Node = 'CLOCKDIV:Waktu|DIVOUT~clkctrl'
-        Info: 4: + IC(1.237 ns) + CELL(0.602 ns) = 7.938 ns; Loc. = LCFF_X50_Y40_N17; Fanout = 1; REG Node = 'Traffic:Lampu|M_US'
-        Info: Total cell delay = 2.497 ns ( 31.46 % )
-        Info: Total interconnect delay = 5.441 ns ( 68.54 % )
+        Info: 2: + IC(1.409 ns) + CELL(0.879 ns) = 3.304 ns; Loc. = LCFF_X1_Y31_N17; Fanout = 2; REG Node = 'CLOCKDIV:Waktu|DIVOUT'
+        Info: 3: + IC(1.658 ns) + CELL(0.000 ns) = 4.962 ns; Loc. = CLKCTRL_G0; Fanout = 16; COMB Node = 'CLOCKDIV:Waktu|DIVOUT~clkctrl'
+        Info: 4: + IC(1.234 ns) + CELL(0.602 ns) = 6.798 ns; Loc. = LCFF_X54_Y43_N25; Fanout = 1; REG Node = 'fsm:Lampu|M_US'
+        Info: Total cell delay = 2.497 ns ( 36.73 % )
+        Info: Total interconnect delay = 4.301 ns ( 63.27 % )
     Info: + Micro hold delay of destination is 0.286 ns
-    Info: - Shortest pin to register delay is 4.542 ns
+    Info: - Shortest pin to register delay is 4.972 ns
         Info: 1: + IC(0.000 ns) + CELL(1.016 ns) = 1.016 ns; Loc. = PIN_M2; Fanout = 7; PIN Node = 'Reset1'
-        Info: 2: + IC(2.768 ns) + CELL(0.758 ns) = 4.542 ns; Loc. = LCFF_X50_Y40_N17; Fanout = 1; REG Node = 'Traffic:Lampu|M_US'
-        Info: Total cell delay = 1.774 ns ( 39.06 % )
-        Info: Total interconnect delay = 2.768 ns ( 60.94 % )
+        Info: 2: + IC(3.198 ns) + CELL(0.758 ns) = 4.972 ns; Loc. = LCFF_X54_Y43_N25; Fanout = 1; REG Node = 'fsm:Lampu|M_US'
+        Info: Total cell delay = 1.774 ns ( 35.68 % )
+        Info: Total interconnect delay = 3.198 ns ( 64.32 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 202 megabytes
-    Info: Processing ended: Sun Nov 17 20:07:12 2019
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Sun Nov 17 20:27:53 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 
