@@ -14,7 +14,7 @@ PORT	(
 			-- OUTPUT 
 			Z			: OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 			-- 00 for A , 01 for B  , 11 for C , 10 for D
-			isStart 	: OUT STD_LOGIC_VECTOR 
+			isStart 	: OUT STD_LOGIC
 			) ;
 END fsm;
 
@@ -34,10 +34,10 @@ ARCHITECTURE Behavior OF fsm IS
 	
 	BEGIN
 		
-	PROCESS (Clock, Reset, Day, Emergency, CurrentState)
+	PROCESS (Clock, Reset, Button,Touched, CurrentState)
 		BEGIN
 		IF Reset = '1' THEN
-			CurrentState <= S0;
+			CurrentState <= A;
 			Counter <= "0000";
 			-- kondisi reset 
 		ELSIF Clock'EVENT AND Clock = '1' THEN
@@ -48,8 +48,8 @@ ARCHITECTURE Behavior OF fsm IS
 					ELSE
 						CurrentState <= A ;
 					END IF;					
-				isStart = '0';
-				Z		= "00" ; 
+				isStart <= '0' ;
+				Z		<= "00" ; 
 				WHEN B =>
 					IF (Button= '0' ) and (Touched= '0' ) THEN 
 						CurrentState <= B ;
@@ -59,28 +59,28 @@ ARCHITECTURE Behavior OF fsm IS
 					ELSE 
 						CurrentState <=  D ; 
 					END IF ;
-				isStart = '1' ; 
-				Z = "01" ; 
+				isStart <= '1' ; 
+				Z <= "01" ; 
 				WHEN C =>
-					 IF (Button = '0') and (Touched= '1') THEN
+					 IF (Button = '1') and (Touched= '0') THEN
 						CurrentState <= C ; 
 					 ELSIF ( Button = '0') and ( Touched ='0') THEN 
 						CurrentState <= B ; 
 					 ELSE 
 						CurrentState <= D ; 
 					 END IF;
-				isStart = '1' ; 
-				Z = '11' ;  
+				isStart <= '1' ; 
+				Z <= "11" ;  
 				WHEN D =>
-					IF ( Counter < SEC8 ) THEN
+					IF ( Counter < GameOverSec ) THEN
 					Counter <= Counter +1 ;
 					CurrentState <= D ; 
 					ELSE 
 					Counter <= "0000";
 					CurrentState <= A ;
 					END IF; 
-				isStart = '0' ; 
-				Z = '10' ; 
+				isStart <= '0' ; 
+				Z <= "10" ; 
 			END CASE;
 		END IF;
 	END PROCESS;

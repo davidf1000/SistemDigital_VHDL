@@ -1,0 +1,7 @@
+
+State Machine - |top_level_vhd|topleveltubes:filegame|fsm:fsmgame|CurrentState
+Name CurrentState.D CurrentState.C CurrentState.B CurrentState.A 
+CurrentState.A 0 0 0 0 
+CurrentState.B 0 0 1 1 
+CurrentState.C 0 1 0 1 
+CurrentState.D 1 0 0 1 

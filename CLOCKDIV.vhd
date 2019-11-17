@@ -10,8 +10,18 @@ architecture behavioural of CLOCKDIV is
 	begin
 		PROCESS(CLK)
 			variable count: integer:=0;
-			constant div: integer:=5;		
+			constant div: integer:=1;	
+			-- change debug for fpga simulation
+			variable  debug : integer := 1 ; 	
 		begin
+				if ( debug = 1 ) THEN
+				if ( CLK='1' ) THEN
+				DIVOUT <= '1' ;
+				ELSE
+				DIVOUT <= '0' ;
+				END IF;
+
+		ELSE
 				if CLK'event and CLK='1' then
 	
 					if(count<div) then
@@ -31,6 +41,7 @@ architecture behavioural of CLOCKDIV is
 					end if;
 
 				end if;
+			end if ;
 		end process;
 end behavioural;
 		

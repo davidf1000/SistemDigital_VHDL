@@ -1,0 +1,422 @@
+Analysis & Synthesis report for top_level_vhd
+Mon Nov 18 00:17:25 2019
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |top_level_vhd|topleveltubes:filegame|fsm:fsmgame|CurrentState
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "display_vhd:module_vga|color_rom_vhd:color_rom0"
+ 13. Port Connectivity Checks: "display_vhd:module_vga|vga:vga_driver0"
+ 14. Port Connectivity Checks: "display_vhd:module_vga"
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 18 00:17:25 2019        ;
+; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                      ; top_level_vhd                                ;
+; Top-level Entity Name              ; top_level_vhd                                ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 72                                           ;
+;     Total combinational functions  ; 61                                           ;
+;     Dedicated logic registers      ; 46                                           ;
+; Total registers                    ; 46                                           ;
+; Total pins                         ; 85                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2C50F484C7       ;                    ;
+; Top-level entity name                                        ; top_level_vhd      ; top_level_vhd      ;
+; Family name                                                  ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                               ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------+
+; top_level_vhd.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL_V2/top_level_vhd.vhd ;
+; Clockdiv.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL_V2/Clockdiv.vhd      ;
+; topleveltubes.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL_V2/topleveltubes.vhd ;
+; fsm.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL_V2/fsm.vhd           ;
+; display_vhd.vhd                  ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL_V2/display_vhd.vhd   ;
+; vga.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL_V2/vga.vhd           ;
+; color_rom_vhd.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/DAVID/Documents/REPO/vhdl/SistemDigital_VHDL_V2/color_rom_vhd.vhd ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                      ;
++---------------------------------------------+----------------------------------------------------+
+; Resource                                    ; Usage                                              ;
++---------------------------------------------+----------------------------------------------------+
+; Estimated Total logic elements              ; 72                                                 ;
+;                                             ;                                                    ;
+; Total combinational functions               ; 61                                                 ;
+; Logic element usage by number of LUT inputs ;                                                    ;
+;     -- 4 input functions                    ; 24                                                 ;
+;     -- 3 input functions                    ; 10                                                 ;
+;     -- <=2 input functions                  ; 27                                                 ;
+;                                             ;                                                    ;
+; Logic elements by mode                      ;                                                    ;
+;     -- normal mode                          ; 43                                                 ;
+;     -- arithmetic mode                      ; 18                                                 ;
+;                                             ;                                                    ;
+; Total registers                             ; 46                                                 ;
+;     -- Dedicated logic registers            ; 46                                                 ;
+;     -- I/O registers                        ; 0                                                  ;
+;                                             ;                                                    ;
+; I/O pins                                    ; 85                                                 ;
+; Maximum fan-out node                        ; display_vhd:module_vga|vga:vga_driver0|clock_25MHz ;
+; Maximum fan-out                             ; 35                                                 ;
+; Total fan-out                               ; 324                                                ;
+; Average fan-out                             ; 1.69                                               ;
++---------------------------------------------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+; |top_level_vhd              ; 61 (0)            ; 46 (0)       ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |top_level_vhd                                        ; work         ;
+;    |display_vhd:module_vga| ; 50 (5)            ; 35 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_vhd|display_vhd:module_vga                 ; work         ;
+;       |vga:vga_driver0|     ; 45 (45)           ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_vhd|display_vhd:module_vga|vga:vga_driver0 ; work         ;
+;    |topleveltubes:filegame| ; 11 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_vhd|topleveltubes:filegame                 ; work         ;
+;       |fsm:fsmgame|         ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level_vhd|topleveltubes:filegame|fsm:fsmgame     ; work         ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |top_level_vhd|topleveltubes:filegame|fsm:fsmgame|CurrentState     ;
++----------------+----------------+----------------+----------------+----------------+
+; Name           ; CurrentState.D ; CurrentState.C ; CurrentState.B ; CurrentState.A ;
++----------------+----------------+----------------+----------------+----------------+
+; CurrentState.A ; 0              ; 0              ; 0              ; 0              ;
+; CurrentState.B ; 0              ; 0              ; 1              ; 1              ;
+; CurrentState.C ; 0              ; 1              ; 0              ; 1              ;
+; CurrentState.D ; 1              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++----------------------------------------------------------+----------------------------------------+
+; Register name                                            ; Reason for Removal                     ;
++----------------------------------------------------------+----------------------------------------+
+; display_vhd:module_vga|vga:vga_driver0|o_pixel_row[9]    ; Stuck at GND due to stuck port data_in ;
+; display_vhd:module_vga|vga:vga_driver0|o_pixel_row[0..8] ; Lost fanout                            ;
+; Total Number of Removed Registers = 10                   ;                                        ;
++----------------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++-------------------------------------------------------+---------------------------+-------------------------------------------------------+
+; Register name                                         ; Reason for Removal        ; Registers Removed due to This Register                ;
++-------------------------------------------------------+---------------------------+-------------------------------------------------------+
+; display_vhd:module_vga|vga:vga_driver0|o_pixel_row[9] ; Stuck at GND              ; display_vhd:module_vga|vga:vga_driver0|o_pixel_row[8] ;
+;                                                       ; due to stuck port data_in ;                                                       ;
++-------------------------------------------------------+---------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 46    ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_level_vhd|display_vhd:module_vga|color_rom_vhd:color_rom0|o_green~1 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_level_vhd|display_vhd:module_vga|VGA_G[1]                           ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |top_level_vhd|display_vhd:module_vga|VGA_G[3]                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display_vhd:module_vga|color_rom_vhd:color_rom0"                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_red[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o_green[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o_blue[1..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "display_vhd:module_vga|vga:vga_driver0" ;
++---------+-------+----------+---------------------------------------+
+; Port    ; Type  ; Severity ; Details                               ;
++---------+-------+----------+---------------------------------------+
+; i_red   ; Input ; Info     ; Stuck at VCC                          ;
+; i_green ; Input ; Info     ; Stuck at VCC                          ;
+; i_blue  ; Input ; Info     ; Stuck at VCC                          ;
++---------+-------+----------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display_vhd:module_vga"                                                                                                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; t    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Nov 18 00:17:23 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level_vhd -c top_level_vhd
+Warning: Using design file top_level_vhd.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: top_level_vhd-behavioral
+    Info: Found entity 1: top_level_vhd
+Info: Elaborating entity "top_level_vhd" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at top_level_vhd.vhd(22): used implicit default value for signal "GPIO_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top_level_vhd.vhd(23): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top_level_vhd.vhd(65): used implicit default value for signal "M_US" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top_level_vhd.vhd(66): used implicit default value for signal "K_US" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top_level_vhd.vhd(67): used implicit default value for signal "H_US" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top_level_vhd.vhd(68): used implicit default value for signal "M_BT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top_level_vhd.vhd(69): used implicit default value for signal "K_BT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top_level_vhd.vhd(70): used implicit default value for signal "H_BT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning: Using design file Clockdiv.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: CLOCKDIV-behavioural
+    Info: Found entity 1: CLOCKDIV
+Info: Elaborating entity "Clockdiv" for hierarchy "Clockdiv:Waktu"
+Warning (10542): VHDL Variable Declaration warning at Clockdiv.vhd(15): used initial value expression for variable "debug" because variable was never assigned a value
+Warning: Using design file topleveltubes.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: topleveltubes-Behavior
+    Info: Found entity 1: topleveltubes
+Info: Elaborating entity "topleveltubes" for hierarchy "topleveltubes:filegame"
+Warning: Using design file fsm.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: fsm-Behavior
+    Info: Found entity 1: fsm
+Info: Elaborating entity "fsm" for hierarchy "topleveltubes:filegame|fsm:fsmgame"
+Warning: Using design file display_vhd.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: display_vhd-behavioral
+    Info: Found entity 1: display_vhd
+Info: Elaborating entity "display_vhd" for hierarchy "display_vhd:module_vga"
+Warning (10541): VHDL Signal Declaration warning at display_vhd.vhd(23): used implicit default value for signal "VGA_CLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at display_vhd.vhd(24): used implicit default value for signal "VGA_BLANK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning: Using design file vga.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: vga-behavioral
+    Info: Found entity 1: vga
+Info: Elaborating entity "vga" for hierarchy "display_vhd:module_vga|vga:vga_driver0"
+Warning: Using design file color_rom_vhd.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: color_rom_vhd-behavioral
+    Info: Found entity 1: color_rom_vhd
+Info: Elaborating entity "color_rom_vhd" for hierarchy "display_vhd:module_vga|color_rom_vhd:color_rom0"
+Warning (10492): VHDL Process Statement warning at color_rom_vhd.vhd(88): signal "grid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND
+    Warning (13410): Pin "VGA_CLK" is stuck at GND
+    Warning (13410): Pin "VGA_BLANK" is stuck at GND
+    Warning (13410): Pin "GPIO_0[0]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[1]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[2]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[3]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[4]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[5]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[6]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[7]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[8]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[9]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[10]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[11]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[12]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[13]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[14]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[15]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[16]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[17]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[18]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[19]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[20]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[21]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[22]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[23]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[24]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[25]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[26]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[27]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[28]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[29]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[30]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[31]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[32]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[33]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[34]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[35]" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+Info: 9 registers lost all their fanouts during netlist optimizations. The first 9 are displayed below.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "display_vhd:module_vga|vga:vga_driver0|o_pixel_row[0]" lost all its fanouts during netlist optimizations.
+Warning: Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+Info: Implemented 159 device resources after synthesis - the final resource count might be different
+    Info: Implemented 14 input pins
+    Info: Implemented 71 output pins
+    Info: Implemented 74 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 83 warnings
+    Info: Peak virtual memory: 272 megabytes
+    Info: Processing ended: Mon Nov 18 00:17:25 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
