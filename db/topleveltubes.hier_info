@@ -1,0 +1,105 @@
+|topleveltubes
+clocktest => ~NO_FANOUT~
+Clock1 => Clockdiv:Waktu.CLK
+Reset1 => Traffic:Lampu.Reset
+Day1 => Traffic:Lampu.Day
+Emergency1 => Traffic:Lampu.Emergency
+M_US1 <= Traffic:Lampu.M_US
+K_US1 <= Traffic:Lampu.K_US
+H_US1 <= Traffic:Lampu.H_US
+M_BT1 <= Traffic:Lampu.M_BT
+K_BT1 <= Traffic:Lampu.K_BT
+H_BT1 <= Traffic:Lampu.H_BT
+
+
+|topleveltubes|Clockdiv:Waktu
+CLK => count[31].CLK
+CLK => count[30].CLK
+CLK => count[29].CLK
+CLK => count[28].CLK
+CLK => count[27].CLK
+CLK => count[26].CLK
+CLK => count[25].CLK
+CLK => count[24].CLK
+CLK => count[23].CLK
+CLK => count[22].CLK
+CLK => count[21].CLK
+CLK => count[20].CLK
+CLK => count[19].CLK
+CLK => count[18].CLK
+CLK => count[17].CLK
+CLK => count[16].CLK
+CLK => count[15].CLK
+CLK => count[14].CLK
+CLK => count[13].CLK
+CLK => count[12].CLK
+CLK => count[11].CLK
+CLK => count[10].CLK
+CLK => count[9].CLK
+CLK => count[8].CLK
+CLK => count[7].CLK
+CLK => count[6].CLK
+CLK => count[5].CLK
+CLK => count[4].CLK
+CLK => count[3].CLK
+CLK => count[2].CLK
+CLK => count[1].CLK
+CLK => count[0].CLK
+CLK => DIVOUT~reg0.CLK
+DIVOUT <= DIVOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topleveltubes|Traffic:Lampu
+Clock => Counter[3].CLK
+Clock => Counter[2].CLK
+Clock => Counter[1].CLK
+Clock => Counter[0].CLK
+Clock => M_US~reg0.CLK
+Clock => K_US~reg0.CLK
+Clock => H_US~reg0.CLK
+Clock => M_BT~reg0.CLK
+Clock => K_BT~reg0.CLK
+Clock => H_BT~reg0.CLK
+Reset => Counter[3].ACLR
+Reset => Counter[2].ACLR
+Reset => Counter[1].ACLR
+Reset => Counter[0].ACLR
+Reset => H_BT~reg0.ENA
+Reset => M_US~reg0.ENA
+Reset => K_US~reg0.ENA
+Reset => H_US~reg0.ENA
+Reset => M_BT~reg0.ENA
+Reset => K_BT~reg0.ENA
+Day => CurrentState~6.OUTPUTSELECT
+Day => Counter~27.OUTPUTSELECT
+Day => Counter~26.OUTPUTSELECT
+Day => Counter~25.OUTPUTSELECT
+Day => Counter~24.OUTPUTSELECT
+Day => CurrentState~4.OUTPUTSELECT
+Day => Counter~11.OUTPUTSELECT
+Day => Counter~10.OUTPUTSELECT
+Day => Counter~9.OUTPUTSELECT
+Day => Counter~8.OUTPUTSELECT
+Day => CurrentState~1.OUTPUTSELECT
+Day => CurrentState~0.OUTPUTSELECT
+Emergency => Selector4.IN3
+Emergency => CurrentState~5.OUTPUTSELECT
+Emergency => Counter~28.OUTPUTSELECT
+Emergency => Counter~29.OUTPUTSELECT
+Emergency => Counter~30.OUTPUTSELECT
+Emergency => Counter~31.OUTPUTSELECT
+Emergency => CurrentState~7.OUTPUTSELECT
+Emergency => Counter~15.OUTPUTSELECT
+Emergency => Counter~14.OUTPUTSELECT
+Emergency => Counter~13.OUTPUTSELECT
+Emergency => Counter~12.OUTPUTSELECT
+Emergency => CurrentState~3.OUTPUTSELECT
+Emergency => CurrentState~2.OUTPUTSELECT
+M_US <= M_US~reg0.DB_MAX_OUTPUT_PORT_TYPE
+K_US <= K_US~reg0.DB_MAX_OUTPUT_PORT_TYPE
+H_US <= H_US~reg0.DB_MAX_OUTPUT_PORT_TYPE
+M_BT <= M_BT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+K_BT <= K_BT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+H_BT <= H_BT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

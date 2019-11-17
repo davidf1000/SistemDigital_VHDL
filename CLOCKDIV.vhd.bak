@@ -10,7 +10,7 @@ architecture behavioural of CLOCKDIV is
 	begin
 		PROCESS(CLK)
 			variable count: integer:=0;
-			constant div: integer:=1;		
+			constant div: integer:=10;		
 		begin
 				if CLK'event and CLK='1' then
 	
